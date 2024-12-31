@@ -15,6 +15,7 @@ setup(
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/olivermolenschot/InsightFlow",  
+    package_dir={'': 'src'},  # Tells Python to look for packages in 'src'
     packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     classifiers=[
         "Programming Language :: Python :: 3",

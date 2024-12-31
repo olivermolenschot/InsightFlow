@@ -7,8 +7,7 @@ InsightFlow is a comprehensive machine learning solution tailored to finance tim
         Cleans, merges, and formats the data based on user-defined parameters.
 
     Feature Engineering & Model Training
-        Creates lagged features, rolling averages, or technical indicators.
-        Trains a classification or regression model (e.g., scikit-learn, PyTorch) that outputs a simple “buy” or “not buy” signal.
+        Trains a classification model (e.g., scikit-learn, PyTorch) that outputs a simple “buy” or “not buy” signal, for the given asset.
         Saves the trained model artifact for reproducibility.
 
     Serving Inference
@@ -23,7 +22,7 @@ InsightFlow is a comprehensive machine learning solution tailored to finance tim
 
 Key Features
 
-    Flexible Schema: As long as your CSV or DataFrame has Open, High, Low, Close, and Volume (plus an optional Label column), InsightFlow can ingest it.
+    Flexible Schema: As long as your CSV or DataFrame has Open, High, Low, Close, and Volume, InsightFlow can ingest it.
     Parametrized Commands: Choose the model type (random forest, logistic regression, or PyTorch-based) and pass hyperparameters via CLI arguments or config.
     Full Transparency: All stages—data, code, and results—are in your control, making it a great learning resource for building production-grade ML.
     Extendable: Adjust or inherit from PyTorch classes if you want custom neural network architectures or specialized training logic.
