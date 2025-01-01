@@ -24,5 +24,3 @@ Key Features
 
     Flexible Schema: As long as your CSV or DataFrame has Open, High, Low, Close, and Volume, InsightFlow can ingest it.
     Parametrized Commands: Choose the model type (random forest, logistic regression, or PyTorch-based) and pass hyperparameters via CLI arguments or config.
-    Full Transparency: All stages—data, code, and results—are in your control, making it a great learning resource for building production-grade ML.
-    Extendable: Adjust or inherit from PyTorch classes if you want custom neural network architectures or specialized training logic.
