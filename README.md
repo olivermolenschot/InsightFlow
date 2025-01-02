@@ -22,5 +22,5 @@ InsightFlow is a comprehensive machine learning solution tailored to finance tim
 
 Key Features
 
-    Flexible Schema: As long as your CSV or DataFrame has Open, High, Low, Close, and Volume, InsightFlow can ingest it.
+    Flexible Schema: As long as your CSV has Open and Close columns for a specific asset, InsightFlow can ingest it.
     Parametrized Commands: Choose the model type (random forest, logistic regression, or PyTorch-based) and pass hyperparameters via CLI arguments or config.
