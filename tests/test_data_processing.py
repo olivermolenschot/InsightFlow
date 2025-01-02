@@ -21,7 +21,7 @@ class TestMyDataset:
         x, y = dataset[0]
         assert isinstance(x, torch.Tensor)
         assert isinstance(y, torch.Tensor)
-        assert x.shape == (15,)
+        assert x.shape == (3,)
         assert y.item() in [0, 1]
 
     def test_map_dataset(self):
@@ -34,8 +34,8 @@ class TestMyDataset:
         assert processed_data['y'][0] == 1
         assert processed_data['y'][1] == 1
 
-        assert processed_data['x'][0].shape == (15,)
-        assert processed_data['x'][1].shape == (15,)
+        assert processed_data['x'][0].shape == (3,)
+        assert processed_data['x'][1].shape == (3,)
 
     def test_data_access(self):
         dataset = self.dataset
@@ -45,7 +45,7 @@ class TestMyDataset:
         x, y = dataset[0]
         assert isinstance(x, torch.Tensor)
         assert isinstance(y, torch.Tensor)
-        assert x.shape == (15,)
+        assert x.shape == (3,)
         assert y.item() in [0, 1]
 
     def test_tensor_format(self):
@@ -62,5 +62,5 @@ class TestMyDataset:
         for x, y in dataloader:
             assert isinstance(x, torch.Tensor)
             assert isinstance(y, torch.Tensor)
-            assert x.shape == (1, 15)
+            assert x.shape == (1, 3)
             assert y.item() in [0, 1]

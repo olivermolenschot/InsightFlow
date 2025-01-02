@@ -6,8 +6,8 @@ import torch
 
 class MyDataset(Dataset):
 
-    COLUMNS = ['Open','High','Low','Close','Volume']
-    def __init__(self, 
+    COLUMNS = ['Open','Close']
+    def __init__(self,
                 csv_path: str
                 ):
         self.data = pd.read_csv(csv_path)
@@ -19,8 +19,10 @@ class MyDataset(Dataset):
         for idx in range(3, len(data)):
             x = []
             for j in range(idx-3, idx):
-                x.append(data.iloc[j][self.COLUMNS].values)  
-            x = np.concatenate(x) 
+                open_value = data.iloc[j][self.COLUMNS[0]]
+                close_value = data.iloc[j][self.COLUMNS[1]]
+                x.append(close_value - open_value)
+            x = np.array(x)
             
             if data.iloc[idx]['Close'] > data.iloc[idx-1]['Close']:
                 y = 1

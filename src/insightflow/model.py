@@ -10,10 +10,10 @@ class Classifier(nn.Module):
                 input_dim: int = 15, 
                 output_dim: int = 1
                 ):
-        super(Classifier,self).__init__()
+        super().__init__()
         self.linear = nn.Linear(input_dim,output_dim)
         self.sigmoid = nn.Sigmoid()
-    
+     
     def forward(self,
                 x: Tensor
                 ):
