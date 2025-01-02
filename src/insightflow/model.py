@@ -7,7 +7,7 @@ class Classifier(nn.Module):
     """
     
     def __init__(self,
-                input_dim: int = 15, 
+                input_dim: int = 3, 
                 output_dim: int = 1
                 ):
         super().__init__()

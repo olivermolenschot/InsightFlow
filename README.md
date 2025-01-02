@@ -3,7 +3,7 @@
 InsightFlow is a comprehensive machine learning solution tailored to finance time series data. It walks you through the full lifecycle of an ML project:
 
     Data Ingestion & Preprocessing
-        Accepts CSV or API inputs with OHL(C)V columns (and optionally a label column).
+        Accepts CSV or API inputs with Open and Close columns.
         Cleans, merges, and formats the data based on user-defined parameters.
 
     Feature Engineering & Model Training
