@@ -17,6 +17,7 @@ setup(
     url="https://github.com/olivermolenschot/InsightFlow",  
     package_dir={'': 'src'},  # Tells Python to look for packages in 'src'
     packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
+    entry_points={'console_scripts':['insightflow=insightflow.cli:cli']},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache Software License",

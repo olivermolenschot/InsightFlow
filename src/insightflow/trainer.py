@@ -1,9 +1,9 @@
 import torch
-from data_processing import MyDataset
 from torch.utils.data import DataLoader
-from model import Classifier
 import torch.nn as nn 
 from torch import optim 
+from insightflow.data_processing import MyDataset
+from insightflow.model import Classifier
 from pathlib import Path
 
 class Trainer():
