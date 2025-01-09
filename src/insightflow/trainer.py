@@ -23,6 +23,7 @@ class Trainer():
         self.device = device
         self.optimizer = optim.Adam(self.model.parameters(), lr=learning_rate)
         self.criterion = nn.BCEWithLogitsLoss()
+        self.path: str | None = None
 
     def train_one_epoch(self):
         self.model.train()
@@ -77,5 +78,6 @@ class Trainer():
             full_path = parent_dict / path
             torch.save(self.model.state_dict(), full_path)
             print(f'model weights saved at {full_path}')
+            self.path = full_path
         except Exception as e:
             print(f'Error saving model: {e}')

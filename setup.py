@@ -32,6 +32,7 @@ setup(
         "fastapi>=0.70.0",
         "uvicorn>=0.15.0",
         "requests>=2.25.0",
+        "python-multipart>=0.0.20",
     ],
     extras_require={
         "dev": [
