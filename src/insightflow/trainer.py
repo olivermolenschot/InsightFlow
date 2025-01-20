@@ -72,7 +72,7 @@ class Trainer():
             # eval_loss, eval_acc = self.evaluate()
             # print(f'Eval loss: {eval_loss:.4f}; Eval Accuracy: {eval_acc:.4f}')
     
-    def save_model(self, path='model_weights.path'):
+    def save_model(self, path='model_weights.pth'):
         try:
             parent_dict = Path(__file__).parent
             full_path = parent_dict / path
